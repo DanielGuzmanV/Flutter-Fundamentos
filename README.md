@@ -1,6 +1,6 @@
 # Flutter - Fundamentos basicos
 
-##Nuevo proyecto de flutter
+## Nuevo proyecto de flutter
 Este proyecto fue realizado por: `AristiDevs`
 
 - [Canal de Programación Android by AristiDevs](https://www.youtube.com/@AristiDevs)

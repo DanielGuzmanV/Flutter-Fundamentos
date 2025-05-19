@@ -1,3 +1,4 @@
+import 'package:basic_flutter/layouts/column.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,10 +20,13 @@ class MainApp extends StatelessWidget {
           title: const Text('Fundamentos - flutter'),
           centerTitle: true,
         ),
+
         body: const Center(
-          child: Text('Hello World!'),
+          child: ClassColumn(),
         ),
+
       ),
+
     );
   }
 }
