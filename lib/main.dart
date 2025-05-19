@@ -1,5 +1,6 @@
 import 'package:basic_flutter/layouts/column.dart';
 import 'package:basic_flutter/layouts/row.dart';
+import 'package:basic_flutter/components/text.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,10 +23,9 @@ class MainApp extends StatelessWidget {
           centerTitle: true,
         ),
 
-        body: const Center(
-          // child: ClassColumn(), // Comemtar row para probar columns y viceversa
-          child: ClassRow(),
-        ),
+        body: const ClassText(),
+          // const ClassColumn(), // Comemtar row para probar columns y viceversa
+          // const ClassRow(),
 
       ),
 
