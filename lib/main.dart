@@ -20,9 +20,17 @@ class MainApp extends StatelessWidget {
       title: 'Fundamentos basicos flutter',
 
       home: Scaffold(
+        backgroundColor: Colors.grey[300],
         appBar: AppBar(
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.blue[400],
+          foregroundColor: Colors.white,
           title: const Text('Fundamentos - flutter'),
+          actions: [
+            IconButton(
+              onPressed: (){}, 
+              icon: const Icon(Icons.work)
+            ),
+          ],
           centerTitle: true,
         ),
 
@@ -32,6 +40,11 @@ class MainApp extends StatelessWidget {
           // const ClassText(),
           // const ClassRow(),
           // const ClassColumn(), // Comemtar row para probar columns y viceversa
+
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+          child: const Icon(Icons.add),
+        ),
 
       ),
 
