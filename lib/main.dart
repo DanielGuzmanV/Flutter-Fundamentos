@@ -1,3 +1,4 @@
+import 'package:basic_flutter/components/image.dart';
 import 'package:basic_flutter/layouts/column.dart';
 import 'package:basic_flutter/layouts/row.dart';
 import 'package:basic_flutter/components/text.dart';
@@ -25,7 +26,8 @@ class MainApp extends StatelessWidget {
           centerTitle: true,
         ),
 
-        body: const ClassButton(),
+        body: const ClassImage(),
+          // const ClassButton(),
           // const ClassTexfield(),
           // const ClassText(),
           // const ClassRow(),
