@@ -2,6 +2,7 @@ import 'package:basic_flutter/layouts/column.dart';
 import 'package:basic_flutter/layouts/row.dart';
 import 'package:basic_flutter/components/text.dart';
 import 'package:basic_flutter/components/textfield.dart';
+import 'package:basic_flutter/components/button.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,10 +25,11 @@ class MainApp extends StatelessWidget {
           centerTitle: true,
         ),
 
-        body: const ClassTexfield(),
-          // const ClassText()
-          // const ClassColumn(), // Comemtar row para probar columns y viceversa
+        body: const ClassButton(),
+          // const ClassTexfield(),
+          // const ClassText(),
           // const ClassRow(),
+          // const ClassColumn(), // Comemtar row para probar columns y viceversa
 
       ),
 
