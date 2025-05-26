@@ -12,7 +12,10 @@ class AppTheme {
   ThemeData seleccionarColor() {
     return ThemeData(
       useMaterial3: true,
-      colorSchemeSeed: colorList[valueColor]
+      colorSchemeSeed: colorList[valueColor],
+      appBarTheme: const AppBarTheme(
+        centerTitle: true
+      )
     );
   }
 
