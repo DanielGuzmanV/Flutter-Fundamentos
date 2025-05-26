@@ -1,5 +1,6 @@
 import 'package:basic_flutter/config/menu/menu_items.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BodyScreen extends StatelessWidget {
   const BodyScreen({super.key});
@@ -39,6 +40,8 @@ class _CustomListTile extends StatelessWidget {
       // Navegacion:
       onTap: () {
         
+        context.push(menuItem.link);
+
       },
 
     );
