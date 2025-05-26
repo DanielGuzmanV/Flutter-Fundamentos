@@ -1,4 +1,5 @@
 import 'package:basic_flutter/components/image.dart';
+import 'package:basic_flutter/config/theme/app_theme.dart';
 import 'package:basic_flutter/layouts/column.dart';
 import 'package:basic_flutter/layouts/row.dart';
 import 'package:basic_flutter/components/text.dart';
@@ -18,6 +19,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(      
       debugShowCheckedModeBanner: false,
       title: 'Fundamentos basicos flutter',
+      theme: AppTheme(valueColor: 6).seleccionarColor(),
 
       home: Scaffold(
         backgroundColor: Colors.grey[300],
