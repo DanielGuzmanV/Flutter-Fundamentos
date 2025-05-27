@@ -44,6 +44,7 @@ final appRouter = GoRouter(
       builder: (context, state) => const BodyComponents(),
     ),
 
+    // Layouts:
     GoRoute(
       path: '/columnBasic',
       builder: (context, state) => const ClassColumn(),
@@ -54,6 +55,24 @@ final appRouter = GoRouter(
       builder: (context, state) => const ClassRow(),
     ),
 
+    // Components:
+    GoRoute(
+      path: '/buttonsBasic',
+      builder: (context, state) => const ClassButton(),
+    ),
+
+    GoRoute(
+      path: '/imageBasic',
+      builder: (context, state) => const ClassImage(),
+    ),
+    GoRoute(
+      path: '/textBasic',
+      builder: (context, state) => const ClassText(),
+    ),
+    GoRoute(
+      path: '/textfieldBasic',
+      builder: (context, state) => const ClassTexfield(),
+    ),
 
 
   ]
