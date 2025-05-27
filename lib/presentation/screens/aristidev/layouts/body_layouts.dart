@@ -6,22 +6,27 @@ class BodyLayouts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: appLayouts.length,
-      itemBuilder: (context, index) {
-        final layoutItems = appLayouts[index];
-
-        return ListTile(
-          leading: Icon(layoutItems.icon),
-
-          title: Text(layoutItems.title),
-          subtitle: Text(layoutItems.subtitle),
-
-          onTap: () {
-            
-          },
-        );
-      },
+    return Scaffold(
+      appBar: AppBar(
+        title: const  Text("Layouts"),
+      ),
+      body: ListView.builder(
+        itemCount: appLayouts.length,
+        itemBuilder: (context, index) {
+          final layoutItems = appLayouts[index];
+      
+          return ListTile(
+            leading: Icon(layoutItems.icon),
+      
+            title: Text(layoutItems.title),
+            subtitle: Text(layoutItems.subtitle),
+      
+            onTap: () {
+              
+            },
+          );
+        },
+      ),
     );
   }
 }

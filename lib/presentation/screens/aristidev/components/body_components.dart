@@ -7,22 +7,28 @@ class BodyComponents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: appComponents.length,
-      itemBuilder: (context, index) {
-        final componentItems = appComponents[index];
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Componetns'),
+      ),
 
-        return ListTile(
-          leading: Icon(componentItems.icon),
-
-          title: Text(componentItems.title),
-          subtitle: Text(componentItems.subtitle),
-
-          onTap: () {
-            
-          },
-        );
-      },
+      body: ListView.builder(
+        itemCount: appComponents.length,
+        itemBuilder: (context, index) {
+          final componentItems = appComponents[index];
+      
+          return ListTile(
+            leading: Icon(componentItems.icon),
+      
+            title: Text(componentItems.title),
+            subtitle: Text(componentItems.subtitle),
+      
+            onTap: () {
+              
+            },
+          );
+        },
+      ),
     );
   }
 }
