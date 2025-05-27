@@ -33,7 +33,7 @@ const appMenuItems = <MenuItems> [
 
   MenuItems(
     title: 'AristiDev', 
-    subtitle: 'Ejemplo practico', 
+    subtitle: 'Ejemplos de AristiDev', 
     link: '/mainflutter', 
     icon: Icons.credit_card,
   ),
