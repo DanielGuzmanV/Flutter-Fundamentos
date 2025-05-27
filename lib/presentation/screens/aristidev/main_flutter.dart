@@ -1,10 +1,10 @@
 import 'package:basic_flutter/presentation/screens/aristidev/body_submenu.dart';
-import 'package:basic_flutter/presentation/screens/aristidev/layouts/column.dart';
-import 'package:basic_flutter/presentation/screens/aristidev/layouts/row.dart';
-import 'package:basic_flutter/presentation/screens/aristidev/components/text.dart';
-import 'package:basic_flutter/presentation/screens/aristidev/components/textfield.dart';
-import 'package:basic_flutter/presentation/screens/aristidev/components/button.dart';
-import 'package:basic_flutter/presentation/screens/aristidev/components/image.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/layouts/widgets/column.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/layouts/widgets/row.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/components/widgets/text.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/components/widgets/textfield.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/components/widgets/button.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/components/widgets/image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
