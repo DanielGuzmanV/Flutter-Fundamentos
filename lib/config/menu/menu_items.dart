@@ -26,8 +26,15 @@ const appMenuItems = <MenuItems> [
 
   MenuItems(
     title: 'Tarjetas', 
-    subtitle: 'Contenedos estilizado', 
+    subtitle: 'Contenedor estilizado', 
     link: '/cards', 
+    icon: Icons.credit_card,
+  ),
+
+  MenuItems(
+    title: 'AristiDev', 
+    subtitle: 'Ejemplo practico', 
+    link: '/mainflutter', 
     icon: Icons.credit_card,
   ),
 

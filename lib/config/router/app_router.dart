@@ -23,5 +23,13 @@ final appRouter = GoRouter(
       name: CardsScreen.nameclass,
       builder: (context, state) => const CardsScreen(),
     ),
+
+    GoRoute(
+      path: '/mainflutter',
+      name: MainFlutter.nameclass,
+      builder: (context, state) => const MainFlutter(),
+    ),
+
+
   ]
 );
