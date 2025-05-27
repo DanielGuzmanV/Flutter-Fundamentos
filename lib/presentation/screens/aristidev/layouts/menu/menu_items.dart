@@ -17,7 +17,7 @@ class ItemsLayouts {
 
 }
 
-const appComponents = <ItemsLayouts> [
+const appLayouts = <ItemsLayouts> [
 
   ItemsLayouts(
     title: 'Columns', 
