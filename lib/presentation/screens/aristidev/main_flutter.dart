@@ -1,12 +1,16 @@
-import 'package:basic_flutter/layouts/column.dart';
-import 'package:basic_flutter/layouts/row.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/layouts/column.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/layouts/row.dart';
 import 'package:basic_flutter/components/text.dart';
 import 'package:basic_flutter/components/textfield.dart';
 import 'package:basic_flutter/components/button.dart';
 import 'package:basic_flutter/components/image.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class MainFlutter extends StatelessWidget {
+  static const String nameclass = 'mainflutter_screen';
+
+
   const MainFlutter({super.key});
 
   @override
@@ -18,16 +22,21 @@ class MainFlutter extends StatelessWidget {
         foregroundColor: Colors.white,
         title: const Text('Fundamentos - flutter'),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.work)),
+          IconButton(
+            onPressed: () {
+              context.pop();
+          }, 
+          icon: const Icon(Icons.work)),
         ],
         centerTitle: true,
       ),
 
-      body: const ClassImage(),
+      body: 
+      // const ClassImage(),
       // const ClassButton(),
       // const ClassTexfield(),
       // const ClassText(),
-      // const ClassRow(),
+      const ClassRow(),
       // const ClassColumn(), // Comemtar row para probar columns y viceversa
 
       floatingActionButton: FloatingActionButton(
