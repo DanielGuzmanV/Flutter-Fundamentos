@@ -1,5 +1,6 @@
 import 'package:basic_flutter/presentation/screens/aristidev/layouts/menu/menu_items.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BodyLayouts extends StatelessWidget {
   const BodyLayouts({super.key});
@@ -22,7 +23,7 @@ class BodyLayouts extends StatelessWidget {
             subtitle: Text(layoutItems.subtitle),
       
             onTap: () {
-              
+              context.push(layoutItems.link);
             },
           );
         },

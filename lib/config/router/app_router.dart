@@ -44,6 +44,16 @@ final appRouter = GoRouter(
       builder: (context, state) => const BodyComponents(),
     ),
 
+    GoRoute(
+      path: '/columnBasic',
+      builder: (context, state) => const ClassColumn(),
+    ),
+
+    GoRoute(
+      path: '/rowBasic',
+      builder: (context, state) => const ClassRow(),
+    ),
+
 
 
   ]
