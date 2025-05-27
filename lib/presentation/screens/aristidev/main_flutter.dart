@@ -1,9 +1,10 @@
+import 'package:basic_flutter/presentation/screens/aristidev/body_submenu.dart';
 import 'package:basic_flutter/presentation/screens/aristidev/layouts/column.dart';
 import 'package:basic_flutter/presentation/screens/aristidev/layouts/row.dart';
-import 'package:basic_flutter/components/text.dart';
-import 'package:basic_flutter/components/textfield.dart';
-import 'package:basic_flutter/components/button.dart';
-import 'package:basic_flutter/components/image.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/components/text.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/components/textfield.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/components/button.dart';
+import 'package:basic_flutter/presentation/screens/aristidev/components/image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -16,7 +17,6 @@ class MainFlutter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         backgroundColor: Colors.blue[400],
         foregroundColor: Colors.white,
@@ -25,24 +25,24 @@ class MainFlutter extends StatelessWidget {
           IconButton(
             onPressed: () {
               context.pop();
-          }, 
-          icon: const Icon(Icons.work)),
+            }, 
+            icon: const Icon(Icons.add_home_rounded)
+          ),
         ],
-        centerTitle: true,
       ),
 
-      body: 
+      body: const BodyFlutter(),
       // const ClassImage(),
       // const ClassButton(),
       // const ClassTexfield(),
       // const ClassText(),
-      const ClassRow(),
+      // const ClassRow(),
       // const ClassColumn(), // Comemtar row para probar columns y viceversa
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   child: const Icon(Icons.add),
+      // ),
     );
   }
 }
