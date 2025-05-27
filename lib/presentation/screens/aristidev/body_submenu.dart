@@ -37,7 +37,7 @@ class _CustomListTile extends StatelessWidget {
       subtitle: Text(subMenuItem.subtitle),
 
       onTap: () {
-        
+        context.push(subMenuItem.link);
       },
 
     );
