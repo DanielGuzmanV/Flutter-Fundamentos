@@ -26,17 +26,7 @@ class MainFlutter extends StatelessWidget {
       ),
 
       body: const BodyFlutter(),
-      // const ClassImage(),
-      // const ClassButton(),
-      // const ClassTexfield(),
-      // const ClassText(),
-      // const ClassRow(),
-      // const ClassColumn(), // Comemtar row para probar columns y viceversa
 
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   child: const Icon(Icons.add),
-      // ),
     );
   }
 }
