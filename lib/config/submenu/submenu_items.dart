@@ -29,7 +29,7 @@ const appSubMenuItems = <SubmenuItems>[
   SubmenuItems(
     title: 'Components', 
     subtitle: 'Tipos de componentes', 
-    link: '/layouts', 
+    link: '/components', 
     icon: Icons.add_chart_outlined
   ), 
 

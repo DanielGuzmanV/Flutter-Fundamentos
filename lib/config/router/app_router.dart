@@ -31,5 +31,20 @@ final appRouter = GoRouter(
     ),
 
 
+
+
+    // Rutas de los components y layouts de AristiDevs
+    GoRoute(
+      path: '/layouts',
+      builder: (context, state) => const BodyLayouts(),
+    ),
+
+    GoRoute(
+      path: '/components',
+      builder: (context, state) => const BodyComponents(),
+    ),
+
+
+
   ]
 );
