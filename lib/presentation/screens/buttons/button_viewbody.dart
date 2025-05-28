@@ -87,14 +87,58 @@ class ButtonViewBody extends StatelessWidget {
                   backgroundColor: WidgetStateProperty.all(Colors.green),
                   foregroundColor: WidgetStateProperty.all(Colors.red)
                 ),
-              )
+              ),
 
-
+              // Boton personalizado:
+              const CustomButton()
 
             ],
           ),
       ),
     );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final colorsCustom = Theme.of(context).colorScheme;
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+
+      child: Material(
+        color: colorsCustom.primary,
+      
+        child: InkWell(
+          onTap: (){},
+          
+          child: const Padding(
+            padding: EdgeInsetsDirectional.symmetric(horizontal: 20, vertical: 10),
+          
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+
+              children: [
+                Icon(Icons.star_outlined, color: Colors.white,),
+                SizedBox(width: 8,),
+                Text(
+                  'Btn Custom',
+                  style: TextStyle(
+                    color: Colors.white
+                  ),
+                ),
+              ],
+            ),
+          
+          ),
+        ),
+      ),
+    );  
   }
 }
 
