@@ -11,7 +11,7 @@ class ButtonsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cards Screen'),
+        title: const Text('Tipos de Botones'),
       ),
 
       body: const ButtonViewBody(),

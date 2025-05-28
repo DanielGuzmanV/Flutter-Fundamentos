@@ -1,3 +1,4 @@
+import 'package:basic_flutter/presentation/screens/card/cards_viewbody.dart';
 import 'package:flutter/material.dart';
 
 class CardsScreen extends StatelessWidget {
@@ -9,9 +10,9 @@ class CardsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Buttons Screen'),
+        title: const Text('Cards Screen'),
       ),
-      body: const Placeholder(),
+      body: const CardsViewbody(),
     );
   }
 }
