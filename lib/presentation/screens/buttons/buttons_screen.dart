@@ -1,9 +1,11 @@
+import 'package:basic_flutter/presentation/screens/buttons/button_viewbody.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
-class CardsScreen extends StatelessWidget {
-  static const String nameclass = 'cards_screen';
+class ButtonsScreen extends StatelessWidget {
+  static const String nameclass = 'button_screen';
 
-  const CardsScreen({super.key});
+  const ButtonsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +14,18 @@ class CardsScreen extends StatelessWidget {
         title: const Text('Cards Screen'),
       ),
 
-      body: const Placeholder(),
+      body: const ButtonViewBody(),
+
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.arrow_back_ios_new_rounded),
+        onPressed: () {
+          context.pop();
+        },
+      ),
     );
     
   }
 }
+
+
 

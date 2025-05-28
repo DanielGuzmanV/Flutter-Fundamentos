@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ButtonsScreen extends StatelessWidget {
-  static const String nameclass = 'button_screen';
+class CardsScreen extends StatelessWidget {
+  static const String nameclass = 'cards_screen';
 
-  const ButtonsScreen({super.key});
+  const CardsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
