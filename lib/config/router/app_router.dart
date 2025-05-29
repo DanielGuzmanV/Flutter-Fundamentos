@@ -30,6 +30,12 @@ final appRouter = GoRouter(
       builder: (context, state) => const MainFlutter(),
     ),
 
+    GoRoute(
+      path: '/progress',
+      name: ProgressScreen.nameclass,
+      builder: (context, state) => const ProgressScreen(),
+    ),
+
 
 
 

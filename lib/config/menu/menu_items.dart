@@ -18,6 +18,12 @@ class MenuItems {
 
 const appMenuItems = <MenuItems> [
   MenuItems(
+    title: 'AristiDev', 
+    subtitle: 'Ejemplos de AristiDev', 
+    link: '/mainflutter', 
+    icon: Icons.people_alt_sharp,
+  ),
+  MenuItems(
     title: 'Botones', 
     subtitle: 'Botones en flutter', 
     link: '/buttons', 
@@ -32,11 +38,14 @@ const appMenuItems = <MenuItems> [
   ),
 
   MenuItems(
-    title: 'AristiDev', 
-    subtitle: 'Ejemplos de AristiDev', 
-    link: '/mainflutter', 
-    icon: Icons.credit_card,
+    title: 'ProgressIndicators', 
+    subtitle: 'Generales y controlados', 
+    link: '/progress', 
+    icon: Icons.refresh_rounded,
   ),
+
+
+
 
 ];
 
