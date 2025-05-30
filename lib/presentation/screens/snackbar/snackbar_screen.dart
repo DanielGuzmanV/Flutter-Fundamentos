@@ -26,7 +26,21 @@ class SnackbarScreen extends StatelessWidget {
       context: context, 
       builder: (context) => AlertDialog(
         title: const Text('Estas seguro?'),
-        content:  const Text('Fugiat esse magna amet qui. Id amet amet consequat magna aliquip esse reprehenderit id et veniam. Fugiat irure irure aute nostrud consectetur excepteur. In ex aliquip ad anim duis consequat ad consequat magna eiusmod. Id Lorem nulla voluptate veniam nostrud.'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('Fugiat esse magna amet qui. Id amet amet consequat magna aliquip esse reprehenderit id et veniam. Fugiat irure irure aute nostrud consectetur excepteur. In ex aliquip ad anim duis consequat ad consequat magna eiusmod. Id Lorem nulla voluptate veniam nostrud.'),
+            const SizedBox(height: 20,),
+            Image.network(
+              'https://pa1.aminoapps.com/6254/6cc6f34e97db96b3520cc9c3218aa5129f08b1f5_00.gif',
+              height: 200,
+              width: 200,
+              fit: BoxFit.cover,
+
+            )
+          ],
+        ),
+        
         actions: [
           TextButton(
             onPressed: () => context.pop(), 
@@ -64,7 +78,13 @@ class SnackbarScreen extends StatelessWidget {
                 showAboutDialog(
                   context: context,
                   children: [
-                    const Text('Ad amet velit officia qui labore duis ex amet. Enim enim aliqua do et sit duis quis. Aliquip est qui ad dolor anim reprehenderit fugiat labore magna commodo reprehenderit mollit ad. Laborum voluptate adipisicing elit laborum aliqua irure.')
+                    const Text('Ad amet velit officia qui labore duis ex amet. Enim enim aliqua do et sit duis quis. Aliquip est qui ad dolor anim reprehenderit fugiat labore magna commodo reprehenderit mollit ad. Laborum voluptate adipisicing elit laborum aliqua irure.'),
+                    const SizedBox(height: 30,),
+                    Image.network(
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/J._M._Flagg%2C_I_Want_You_for_U.S._Army_poster_%281917%29.jpg/1200px-J._M._Flagg%2C_I_Want_You_for_U.S._Army_poster_%281917%29.jpg',
+                      height: 200,
+                      width: 200,
+                    )
                   ]
                 );
               }, 
