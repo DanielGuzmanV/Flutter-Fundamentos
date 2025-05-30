@@ -1,3 +1,4 @@
+import 'package:basic_flutter/presentation/screens/ui_controls/ui_controls_body.dart';
 import 'package:flutter/material.dart';
 
 class UiControlsScreen extends StatelessWidget {
@@ -7,6 +8,12 @@ class UiControlsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('UI controls'),
+      ),
+
+      body: const UiControlsBody(),
+    );
   }
 }
