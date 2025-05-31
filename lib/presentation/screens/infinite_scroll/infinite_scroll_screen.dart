@@ -37,7 +37,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
     super.dispose();
   }
 
-  // Funcion asincrona para cargar las imagenes:
+  // Metodo asincrona para cargar las imagenes:
   Future cargarSiguientePage() async {
 
     if(isLoading) return;
@@ -50,6 +50,10 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 
     if(!isActiveLoading) return;
     setState(() {});
+
+    // Llamamos al metodo para mover ligeramente las imagenes arriba;
+    moverScrollAbajo();
+
   }
 
   // =====================================================
@@ -81,6 +85,20 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
     );
   }
   
+  // Metodo para mover el scroll abajo
+  void moverScrollAbajo() {
+
+    if(controlScroll.position.pixels + 150 <= controlScroll.position.maxScrollExtent) return;
+    
+    controlScroll.animateTo(
+      controlScroll.position.pixels + 150, 
+      duration: const Duration(milliseconds: 300), 
+      curve: Curves.fastOutSlowIn
+    );
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
