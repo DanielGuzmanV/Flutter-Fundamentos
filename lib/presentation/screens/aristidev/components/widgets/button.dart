@@ -18,13 +18,13 @@ class ClassButton extends StatelessWidget {
               onPressed: () {
                 // print('Boton presionado');
               }, 
-              child: Text('Boton'),
               onLongPress: () {
                 // print('Pulsando boton');
               },
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all(Colors.yellow)
               ),
+              child: const Text('Boton'),
             ),
       
             // Boton outline:
