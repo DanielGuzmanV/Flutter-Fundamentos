@@ -54,6 +54,24 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 
   // =====================================================
 
+  // Metodo asincrono para realizar un refresh:
+  Future<void> functionOnRefresh() async {
+    isActiveLoading = true;
+    setState(() {});
+
+    await Future.delayed(const Duration(seconds: 3));
+    if(!isActiveLoading) return;
+
+    isActiveLoading = false;
+    final lastIdList = imagenId.last;
+    imagenId.clear();
+    imagenId.add(lastIdList +  1);
+
+    addImagesList();
+  
+    setState(() {});
+  }
+
   // Metodo para agregar mas iD:
   void addImagesList() {
     final ultimoID = imagenId.last;
@@ -70,18 +88,21 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
         title: const Text('InfiniteScroll'),
       ),
 
-      body: ListView.builder(
-        controller: controlScroll,
-        itemCount: imagenId.length,
-        itemBuilder: (context, index) {
-          return FadeInImage(
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: 300,
-            placeholder: const AssetImage('assets/images/jar-loading.gif'), 
-            image: NetworkImage('https://picsum.photos/id/${imagenId[index]}/500/300')
-          );
-        },
+      body: RefreshIndicator(
+        onRefresh: () => functionOnRefresh(),
+        child: ListView.builder(
+          controller: controlScroll,
+          itemCount: imagenId.length,
+          itemBuilder: (context, index) {
+            return FadeInImage(
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: 300,
+              placeholder: const AssetImage('assets/images/jar-loading.gif'), 
+              image: NetworkImage('https://picsum.photos/id/${imagenId[index]}/500/300')
+            );
+          },
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(
