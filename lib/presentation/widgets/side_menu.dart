@@ -1,3 +1,4 @@
+import 'package:basic_flutter/config/menu/menu_items.dart';
 import 'package:flutter/material.dart';
 
 class SideMenu extends StatefulWidget {
@@ -13,6 +14,9 @@ class _SideMenuState extends State<SideMenu> {
 
   @override
   Widget build(BuildContext context) {
+
+    final tieneNotch = MediaQuery.of(context).viewPadding.top > 35;
+
     return NavigationDrawer(
       selectedIndex: navDrawerIndex,
       onDestinationSelected: (value) {
@@ -22,15 +26,44 @@ class _SideMenuState extends State<SideMenu> {
       },
 
       children: [
-        NavigationDrawerDestination(
-          icon: const Icon(Icons.home_outlined), 
-          label: const Text('Home drawer')
+        Padding(
+          padding: EdgeInsets.fromLTRB(20, tieneNotch? 10 : 20, 16, 10),
+          child: const Text('Menu lateral'),
         ),
 
-        NavigationDrawerDestination(
-          icon: const Icon(Icons.add_shopping_cart_rounded), 
-          label: const Text('Nueva pantalla')
+        ...appMenuItems
+        .sublist(4, 8)
+        .map((itemVal) => NavigationDrawerDestination(
+          icon: Icon(itemVal.icon),
+          label: Text(itemVal.title),
+        )),
+
+        const Padding(
+          padding: EdgeInsets.fromLTRB(28, 16, 28, 10),
+          child: Divider(
+            color: Colors.black,
+          ),
         ),
+
+        Padding(
+          padding: EdgeInsets.fromLTRB(20, tieneNotch? 10 : 20, 16, 10),
+          child: const Text('Mas Opciones'),
+        ),
+
+        ...appMenuItems
+        .sublist(0, 3)
+        .map((itemVal) => NavigationDrawerDestination(
+          icon: Icon(itemVal.icon),
+          label: Text(itemVal.title),
+        )),
+
+
+
+
+
+        
+
+        
       ]
     );
   }
