@@ -1,8 +1,14 @@
 import 'package:basic_flutter/config/menu/menu_items.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SideMenu extends StatefulWidget {
-  const SideMenu({super.key});
+  final GlobalKey<ScaffoldState> valueScaffoldKey;
+
+  const SideMenu({
+    super.key, 
+    required this.valueScaffoldKey
+  });
 
   @override
   State<SideMenu> createState() => _SideMenuState();
@@ -10,7 +16,7 @@ class SideMenu extends StatefulWidget {
 
 class _SideMenuState extends State<SideMenu> {
 
-  int navDrawerIndex = 1;
+  int navDrawerIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +24,20 @@ class _SideMenuState extends State<SideMenu> {
     final tieneNotch = MediaQuery.of(context).viewPadding.top > 35;
 
     return NavigationDrawer(
+
+      // Seleccion de una opcion:
       selectedIndex: navDrawerIndex,
       onDestinationSelected: (value) {
         setState(() {
           navDrawerIndex = value;
         });
+
+        // Ir a la opcion seleccionada:
+        final valueItems = appMenuItems[value];
+        context.push(valueItems.link);
+
+        // Volvemos al menu principal
+        widget.valueScaffoldKey.currentState?.closeDrawer();
       },
 
       children: [
@@ -32,7 +47,7 @@ class _SideMenuState extends State<SideMenu> {
         ),
 
         ...appMenuItems
-        .sublist(4, 8)
+        .sublist(0, 3)
         .map((itemVal) => NavigationDrawerDestination(
           icon: Icon(itemVal.icon),
           label: Text(itemVal.title),
@@ -51,19 +66,12 @@ class _SideMenuState extends State<SideMenu> {
         ),
 
         ...appMenuItems
-        .sublist(0, 3)
+        .sublist(3)
         .map((itemVal) => NavigationDrawerDestination(
           icon: Icon(itemVal.icon),
           label: Text(itemVal.title),
         )),
 
-
-
-
-
-        
-
-        
       ]
     );
   }
