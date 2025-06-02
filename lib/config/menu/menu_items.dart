@@ -23,6 +23,14 @@ const appMenuItems = <MenuItems> [
     link: '/mainflutter', 
     icon: Icons.people_alt_sharp,
   ),
+
+  MenuItems(
+    title: 'Counter Screen', 
+    subtitle: 'Contador con riverpod', 
+    link: '/counter', 
+    icon: Icons.access_time_outlined,
+  ),
+
   MenuItems(
     title: 'Botones', 
     subtitle: 'Botones en flutter', 
