@@ -20,8 +20,10 @@ class MainApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
 
-    final bool valueDarkMode = ref.watch(isDarkmodeProvider);
-    final int selectcolor = ref.watch(selectedColorProvider);
+    // final bool valueDarkMode = ref.watch(isDarkmodeProvider);
+    // final int selectcolor = ref.watch(selectedColorProvider);
+
+    final AppTheme appThemeProvier = ref.watch(themeNotifierProvider);
 
     return MaterialApp.router(    
       
@@ -29,7 +31,7 @@ class MainApp extends ConsumerWidget {
 
       debugShowCheckedModeBanner: false,
       title: 'Fundamentos basicos flutter',
-      theme: AppTheme(valueColor: selectcolor, isDarkmode: valueDarkMode).seleccionarColor(),
+      theme: appThemeProvier.seleccionarColor(),
 
     );
   }

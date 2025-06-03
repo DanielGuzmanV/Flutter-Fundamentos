@@ -11,3 +11,21 @@ final selectedColorProvider = StateProvider<int>((ref) => 0);
 
 
 
+
+// ==================================================
+final themeNotifierProvider = StateNotifierProvider<ThemeControllNotifier, AppTheme>(
+  (ref) => ThemeControllNotifier()
+);
+
+// Clase 
+class ThemeControllNotifier extends StateNotifier<AppTheme> {
+
+  // State = Estado = new AppTheme();
+  ThemeControllNotifier(): super(AppTheme());
+
+}
+
+
+
+
+
