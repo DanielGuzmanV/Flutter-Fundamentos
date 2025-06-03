@@ -16,7 +16,9 @@ class ThemeScreen extends ConsumerWidget {
         title: const Text('Cambiar temas'),
         actions: [
           IconButton(
-            onPressed: (){}, 
+            onPressed: (){
+              ref.read(isDarkmodeProvider.notifier).update((state) => !state);
+            }, 
             icon: Icon(isDarkmode? Icons.dark_mode_outlined : Icons.light_mode_outlined),
           )
         ],
@@ -33,6 +35,7 @@ class _ThemeChangerview extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final List<Color> valueColors = ref.watch(colorListProvider);
+    final int selectColor = ref.watch(selectedColorProvider);
 
     return ListView.builder(
       itemCount: valueColors.length,
@@ -44,9 +47,9 @@ class _ThemeChangerview extends ConsumerWidget {
           subtitle: Text('${indexColor.value}'),
           activeColor: indexColor,
           value: index, 
-          groupValue: 1, 
+          groupValue: selectColor, 
           onChanged: (value) {
-            
+            ref.read(selectedColorProvider.notifier).state = index;
           },
         );
       },
