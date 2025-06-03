@@ -25,6 +25,13 @@ class AppTheme {
     );
   }
 
+  AppTheme copyWith({int? valueColor, bool? isDarkmode}) {
+    return AppTheme(
+      valueColor: valueColor ?? this.valueColor,
+      isDarkmode: isDarkmode ?? this.isDarkmode,
+    );
+  } 
+
 }
 
 // lista de colores:
