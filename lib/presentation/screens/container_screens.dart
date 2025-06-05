@@ -1,3 +1,5 @@
+export 'package:basic_flutter/presentation/screens/discover/discover_screen.dart';
+
 export 'package:basic_flutter/presentation/screens/theme_changer/theme_screen.dart';
 export 'package:basic_flutter/presentation/screens/counter/counter_screen.dart';
 
