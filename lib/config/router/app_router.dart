@@ -78,6 +78,12 @@ final appRouter = GoRouter(
       builder: (context, state) => const ThemeScreen(),
     ),
 
+    GoRoute(
+      path: '/toktik',
+      name: DiscoverScreen.nameclass,
+      builder: (context, state) => const DiscoverScreen(),
+    ),
+
 
 
 

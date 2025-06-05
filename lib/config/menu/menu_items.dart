@@ -25,6 +25,13 @@ const appMenuItems = <MenuItems> [
   ),
 
   MenuItems(
+    title: 'Toktik images', 
+    subtitle: 'vertical toktik images', 
+    link: '/toktik', 
+    icon: Icons.vertical_align_center_sharp,
+  ),
+
+  MenuItems(
     title: 'Counter Screen', 
     subtitle: 'Contador con riverpod', 
     link: '/counter', 
