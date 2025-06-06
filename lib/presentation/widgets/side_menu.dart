@@ -37,7 +37,7 @@ class _SideMenuState extends State<SideMenu> {
         context.push(valueItems.link);
 
         // Volvemos al menu principal
-        widget.valueScaffoldKey.currentState?.closeDrawer();
+        // widget.valueScaffoldKey.currentState?.closeDrawer();
       },
 
       children: [
