@@ -1,4 +1,5 @@
 import 'package:basic_flutter/domain/entities/video_post.dart';
+import 'package:basic_flutter/presentation/widgets/shared/video_buttons.dart';
 import 'package:flutter/material.dart';
 
 class VideoScrollableView extends StatelessWidget {
@@ -12,21 +13,27 @@ class VideoScrollableView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageView(
+    return PageView.builder(
       physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.vertical,
+      itemCount: videos.length,
+      itemBuilder: (context, index) {
+        final valueVideoPost = videos[index];
 
-      children: [
-        Container(color: Colors.red),
-        Container(color: Colors.blue,),
-        Container(color: Colors.green,),
-        Container(color: Colors.yellow,),
-        Container(color: Colors.purple,),
-        Container(color: Colors.orange,),
-        Container(color: Colors.pink,),
-        Container(color: Colors.grey,),
-        Container(color: Colors.brown,),
-      ],
+        return Stack(
+          children: [
+
+            Positioned(
+              bottom: 40,
+              right: 20,
+              child: VideoButtons(video: valueVideoPost)
+            ),
+
+          ],
+        );
+      },
+
+
     );
   }
 }
