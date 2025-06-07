@@ -1,3 +1,4 @@
+import 'package:basic_flutter/config/helpers/number_formats.dart';
 import 'package:basic_flutter/domain/entities/video_post.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +56,7 @@ class _CustomIconButtons extends StatelessWidget {
           )
         ), 
 
-        Text('$value')
+        Text( NumberFormats.readbleNumber(value.toDouble()) )
       ],
     );
   }
