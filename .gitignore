@@ -43,7 +43,7 @@ app.*.map.json
 /android/app/release
 
 # otros archivos
-android
+assets/videos/*.mp4
 ios
 linux
 macos
