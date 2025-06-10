@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:basic_flutter/config/helpers/number_formats.dart';
 import 'package:basic_flutter/domain/entities/video_post.dart';
 import 'package:flutter/material.dart';
@@ -21,11 +22,22 @@ class VideoButtons extends StatelessWidget {
           iconColor: Colors.red,
           iconData: Icons.favorite,
         ),
+        const SizedBox(height: 20,),
 
         _CustomIconButtons(
           value: video.views, 
           iconData: Icons.remove_red_eye_outlined
-        )
+        ),
+        const SizedBox(height: 20,),
+
+        SpinPerfect(
+          infinite: true,
+          duration: const Duration(seconds: 5),
+          child: const _CustomIconButtons(
+            value:  0, 
+            iconData: Icons.play_circle_outlined
+          ),
+        ),
 
       ],
     );
@@ -56,6 +68,7 @@ class _CustomIconButtons extends StatelessWidget {
           )
         ), 
 
+        if(value > 0) 
         Text( NumberFormats.readbleNumber(value.toDouble()) )
       ],
     );
