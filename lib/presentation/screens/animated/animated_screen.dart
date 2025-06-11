@@ -44,15 +44,19 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       ),
 
       body: Center(
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 400),
-          curve: Curves.easeOutCubic,
-            
-          width: valueWidth <= 0 ? 0 : valueWidth,
-          height: valueHeight <= 0 ? 0 : valueHeight,
-          decoration: BoxDecoration(
-            color: valueColors,
-            borderRadius: BorderRadius.circular(valueBorderRadius <= 0 ? 0 : valueBorderRadius),
+        child: GestureDetector(
+          onTap: () => changeAnimateContent(),
+
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 400),
+            curve: Curves.bounceOut,
+              
+            width: valueWidth <= 0 ? 0 : valueWidth,
+            height: valueHeight <= 0 ? 0 : valueHeight,
+            decoration: BoxDecoration(
+              color: valueColors,
+              borderRadius: BorderRadius.circular(valueBorderRadius <= 0 ? 0 : valueBorderRadius),
+            ),
           ),
         ),
       ),
