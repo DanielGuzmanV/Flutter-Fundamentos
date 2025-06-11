@@ -14,9 +14,6 @@ class DiscoverScreen extends ConsumerWidget {
     final discoverStateProvider = ref.watch(discoverProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Toktik Images'),
-      ),
 
       body: discoverStateProvider.initialLoading
       ? const Center(child: CircularProgressIndicator(strokeWidth: 2,),)
