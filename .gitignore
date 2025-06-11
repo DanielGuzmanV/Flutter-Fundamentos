@@ -44,6 +44,7 @@ app.*.map.json
 
 # otros archivos
 assets/videos/*.mp4
+assets/images/*.jpg
 ios
 linux
 macos
