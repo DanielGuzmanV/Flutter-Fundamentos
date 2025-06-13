@@ -43,7 +43,7 @@ class CounterScreen extends ConsumerWidget {
             ),
 
             Text(
-              'Nuemero${clickCounter >= 10? 's' : ''}',
+              'Numero${clickCounter >= 10? 's' : ''}',
               style: const TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w500
